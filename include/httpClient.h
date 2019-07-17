@@ -3,9 +3,9 @@
 #include <WiFiNINA.h>
 
 // Name of the server we want to connect to
-const char kHostname[] = "flask-deploy-lesson.herokuapp.com";
+const char kHostname[] = "serieux-chaise-61715.herokuapp.com";
 // endpoint
-const char kPath[] = "/";
+const char kPath[] = "/alarm/getTime?serial=12345";
 
 // Number of milliseconds to wait without receiving any data before we give up
 const int kNetworkTimeout = 30*1000;
