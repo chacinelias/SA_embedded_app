@@ -1,13 +1,6 @@
 #include <Arduino.h>
 #include <WiFiNINA.h>
-
-//SCHOOL
-// char ssid[] = "Samsung Galaxy Note7_2301";
-// char pass[] = "bkks0332";
-
-//HOME
-char ssid[] = "Chacin";
-char pass[] = "Newton58173";
+#include "secret.h"
 
 void wifiConnect(){
     // attempt to connect to Wifi network:

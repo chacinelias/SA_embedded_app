@@ -8,8 +8,11 @@
 //create memory pool for json response
 StaticJsonDocument<200> doc;
 
-const long callInterval = 5000;
+const long callInterval = 15000;
 unsigned long previousMillis;
+
+const int localAlarmHour = 20;
+const int localAlarmMinute = 00;
 
 void setup()
 {
@@ -20,6 +23,7 @@ void setup()
 
   //clock init
   rtc.begin();
+
 
   // //get time in epoch format
   getEpoch();
@@ -78,6 +82,10 @@ void loop(){
 
   //CHECK IF IT'S TIME TO SOUND ALARM
   if(alarmHour == hour && minute >= alarmMinute){
+    ringtone_1();
+  }
+
+  if(localAlarmHour == hour && minute >= localAlarmMinute){
     ringtone_1();
   }
 }
