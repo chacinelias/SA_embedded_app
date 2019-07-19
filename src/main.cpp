@@ -11,8 +11,8 @@ StaticJsonDocument<200> doc;
 const long callInterval = 15000;
 unsigned long previousMillis;
 
-const int localAlarmHour = 20;
-const int localAlarmMinute = 00;
+const int localAlarmHour = 24;
+const int localAlarmMinute = 11;
 
 void setup()
 {
@@ -81,11 +81,7 @@ void loop(){
   }
 
   //CHECK IF IT'S TIME TO SOUND ALARM
-  if(alarmHour == hour && minute >= alarmMinute){
-    ringtone_1();
-  }
-
-  if(localAlarmHour == hour && minute >= localAlarmMinute){
+  if((alarmHour == hour && minute == alarmMinute) || (localAlarmHour == hour && minute == localAlarmMinute)){
     ringtone_1();
   }
 }
