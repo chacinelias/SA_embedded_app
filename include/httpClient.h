@@ -5,7 +5,7 @@
 // Name of the server we want to connect to
 const char kHostname[] = "serieux-chaise-61715.herokuapp.com";
 // endpoint
-const char kPath[] = "/alarm/getTime?serial=55555";
+const char kPath[] = "/alarm/getTime?serial=7777777";
 
 // Number of milliseconds to wait without receiving any data before we give up
 const int kNetworkTimeout = 30*1000;
